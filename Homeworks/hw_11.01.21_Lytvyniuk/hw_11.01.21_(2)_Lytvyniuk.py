@@ -6,6 +6,6 @@ class Book:
     author = "some_author"
     price = 0
 
-    def __init__(self, name, year):
+    def __init__(self, name):
         self.name = name
-        self.year = year
+
