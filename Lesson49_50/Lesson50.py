@@ -56,6 +56,7 @@ print(ukraine.cities)
 print(Country.countries)
 ukraine.countries = "no"  # В такому випадку поле countries в об'єкті ukraine обнуляться (лише в об'єкті ukraine)
 usa = Country("USA", "WashingtonDC")
+ukraine.countries = {}
 print(poland.countries)
 print(ukraine.countries)
 print(usa.countries)

@@ -39,7 +39,7 @@ print(audi.price)
 print(dir(audi))
 print(audi.engine)
 print(bmw.engine)
-# audi.engine = "diesel"
+audi.engine = "diesel"
 Car.engine = "electric"
 print(audi.engine)
 print(bmw.engine)
@@ -66,3 +66,9 @@ bmw.start()
 
 print(audi.mileage, bmw.mileage, citroen.mileage)
 print(f"{audi.date}\n{bmw.date}\n{citroen.date}")
+print()
+print(audi.engine)
+print()
+print(bmw.engine)
+print()
+print(citroen.engine)
