@@ -5,3 +5,7 @@ class Book:
     genre = "default_genre"
     author = "some_author"
     price = 0
+
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
