@@ -40,13 +40,13 @@ while edit:
                  "or press [Enter] to exit: ")
     if edit == "ca":
         capacity = float(input("Enter engine capacity: "))
-        new_car.engine_capacity = capacity
+        new_car.input_capacity(capacity)
     elif edit == "co":
         color = input("Enter color of a car: ")
-        new_car.color = color
+        new_car.input_color(color)
     elif edit == "pr":
         price = int(input("Enter price of a car: "))
-        new_car.price = price
+        new_car.input_price(price)
     elif edit == "i":
         new_car.show_info()
 

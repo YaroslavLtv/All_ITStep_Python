@@ -14,7 +14,7 @@ class Book:
     def input_genre(self, genre):
         self.genre = genre
 
-    def input_color(self, author):
+    def input_author(self, author):
         self.author = author
 
     def input_price(self, price):
@@ -40,12 +40,12 @@ while edit:
                  "or press [Enter] to exit: ")
     if edit == "g":
         genre = input("Type a genre of a book: ")
-        new_book.genre = genre
+        new_book.input_genre(genre)
     elif edit == "a":
         author = input("Type author of a book: ")
-        new_book.author = author
+        new_book.input_author(author)
     elif edit == "p":
         price = int(input("Enter price of a book: "))
-        new_book.price = price
+        new_book.input_price(price)
     elif edit == "i":
         new_book.show_info()
