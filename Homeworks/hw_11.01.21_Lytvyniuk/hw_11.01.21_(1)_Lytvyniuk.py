@@ -36,14 +36,17 @@ while edit:
     edit = input("To change car parameters type:\n[ca] - edit engine capacity\n"
                  "[co] - edit color\n"
                  "[pr] - change price\n"
-                 "\tTo see info about car:\n\t[pr] - info\n"
+                 "\tTo see info about car:\n\t[i] - info\n"
                  "or press [Enter] to exit: ")
     if edit == "ca":
         capacity = float(input("Enter engine capacity: "))
+        new_car.engine_capacity = capacity
     elif edit == "co":
         color = input("Enter color of a car: ")
+        new_car.color = color
     elif edit == "pr":
         price = int(input("Enter price of a car: "))
-    elif edit == "pr":
+        new_car.price = price
+    elif edit == "i":
         new_car.show_info()
 
