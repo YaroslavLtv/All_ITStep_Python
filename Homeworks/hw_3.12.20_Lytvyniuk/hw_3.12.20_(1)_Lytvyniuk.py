@@ -37,8 +37,9 @@ while user_input:
         basketball_players.pop(del_player)
     if user_input == "find":
         user_word = input("Enter a player name to find: ")
-        if user_word in basketball_players:
-            print(user_word, basketball_players[user_word])
+        for key in basketball_players:
+            if user_word in key:
+                print(key, basketball_players[key])
         else:
             for key in basketball_players:
                 if basketball_players[key] == user_word:
