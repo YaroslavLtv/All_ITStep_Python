@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request, redirect
 
 app = Flask(__name__)
 
@@ -34,6 +34,24 @@ def get_article(id):
 @app.route('/about')
 def about_page():
     return 'About page!'
+
+
+@app.route('/create/article', methods=['GET', 'POST'])
+def create_article():
+    if request.method == 'GET':
+        print(render_template('create_article.html'))
+        return render_template('create_article.html')
+    if request.method == 'POST':
+        articles.append({'author': request.form['article_author'],
+                         'title': request.form['article_title'],
+                         'text': request.form['article_text'],
+                         })
+        return redirect('/')
+    else:
+        return 'method not allowed'
+
+    print(f'create article method {request.method}')
+    return 'Hello World'
 
 
 if __name__ == '__main__':
