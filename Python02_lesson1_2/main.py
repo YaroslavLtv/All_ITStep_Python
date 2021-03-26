@@ -1,7 +1,7 @@
 from flask import Flask, render_template, abort, request, redirect
 
 app = Flask(__name__)
-
+app.debug = True
 articles = [
     {
         'id': 1,
@@ -50,8 +50,7 @@ def create_article():
     else:
         return 'method not allowed'
 
-    print(f'create article method {request.method}')
-    return 'Hello World'
+
 
 
 if __name__ == '__main__':
