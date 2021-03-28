@@ -1,0 +1,7 @@
+    form{
+        position: relative;
+        border: 1px solid;
+        display: inline-block;
+
+        width: 300px;
+    }
